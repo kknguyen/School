@@ -1,0 +1,165 @@
+Script started on Thu 05 Dec 2013 06:13:06 AM PST
+bash-3.2$ valgrind --leak-check=full ./a.out[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./a.out[K[C[C[C[C[C[C[C[C[C[C[4Pg++ -g *.cpp[C[C[C[C[C[C[C[C[C[Cvalgrind ./a.out[C[C[C[C[C[C[C[C[C[C[4Pg++ -g *.cpp[1P *.cpp[1P *.cpp[1P*.cpp
+bash-3.2$ g++ *.cppvalgrind --leak-check=full ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P ./a.out[1P./a.out
+==8671== Memcheck, a memory error detector
+==8671== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==8671== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==8671== Command: ./a.out
+==8671== 
+[AddtoInventoryError]: Genre Z invalid
+
+[AddtoInventoryError]: Genre Z invalid
+
+[TransactionError]: Transaction type X indvalid
+
+[TransactionError]: Transaction type Z indvalid
+
+Inventory--------------------------------------------------------------------
+ IN  OUT  TITLE                  DIRECTOR         YEAR MO  ACTOR
+-----------------------------------------------------------------------------
+ 10   0   Holiday                George Cukor     1938  9  Cary Grant
+ 10   0   Holiday                George Cukor     1938  9  Katherine Hepburn
+ 10   0   Gone With the Wind     Victor Fleming   1939  2  Clark Gable
+ 10   0   Gone With the Wind     Victor Fleming   1939  2  Vivien Leigh
+ 10   0   The Wizard of Oz       Victor Fleming   1939  7  Judy Garland
+ 10   0   The Philadelphia Stor  George Cukor     1940  5  Cary Grant
+ 10   0   The Philadelphia Stor  George Cukor     1940  5  Katherine Hepburn
+ 10   0   The Maltese Falcon     John Huston      1941 10  Humphrey Bogart
+ 10   0   Casablanca             Michael Curtiz   1942  8  Humphrey Bogart
+ 10   0   Casablanca             Michael Curtiz   1942  8  Ingrid Bergman
+ 10   0   It's a Wonderful Life  Frank Capra      1946 11  Donna Reed
+ 10   0   It's a Wonderful Life  Frank Capra      1946 11  James Steward
+ 10   0   A Clockwork Orange     Stanley Kubrick  1971  2  Malcolm McDowell
+ 10   0   Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+ 10   0   Wall-E                 Andrew Stanton   2008 
+ 10   0   Good Morning Vietnam   Barry Levinson   1988 
+ 10   0   Unforgiven             Clint Eastwood   1992 
+ 10   0   Good Will Hunting      Gus Van Sant     2000 
+ 10   0   Dogfight               Nancy Savoca     1991 
+ 10   0   King of Hearts         Phillippe De Br  1967 
+ 10   0   Schindler's List       Steven Spielber  1993 
+ 10   0   Annie Hall             Woody Allen      1977 
+ 10   0   Fargo                  Joel Coen        1996 
+ 10   0   National Lampoon's An  John Landis      1978 
+ 10   0   Pirates of the Caribb  Gore Verbinski   2003 
+ 10   0   Sleepless in Seattle   Nora Ephron      1993 
+ 10   0   The Hangover           Todd Phillips    2009 
+ 10   0   When Harry Met Sally   Rob Reiner       1989 
+ 10   0   You've Got Mail        Nora Ephron      1998 
+
+  *** Customer ID = 1000  Minnie Mouse
+
+  *** Customer ID = 5000  Freddie Frog
+
+  *** Customer ID = 8000  Wally Wacky
+
+[TransactionError]: Genre Z invalid
+
+[TransactionError]: Customer ID 1234 invalid
+
+[TransactionError]: Bogus Title does not exist in system
+
+[TransactionError]: Media type Z invalid
+
+[TransactionError]: Harold and Maude not available
+
+[TransactionError]: Harold and Maude not available
+
+[TransactionError]: Harold and Maude not available
+
+[TransactionError]: Bogus Title does not exist in system
+
+Inventory--------------------------------------------------------------------
+ IN  OUT  TITLE                  DIRECTOR         YEAR MO  ACTOR
+-----------------------------------------------------------------------------
+  9   1   Holiday                George Cukor     1938  9  Cary Grant
+ 10   0   Holiday                George Cukor     1938  9  Katherine Hepburn
+ 10   0   Gone With the Wind     Victor Fleming   1939  2  Clark Gable
+ 10   0   Gone With the Wind     Victor Fleming   1939  2  Vivien Leigh
+ 10   0   The Wizard of Oz       Victor Fleming   1939  7  Judy Garland
+  9   1   The Philadelphia Stor  George Cukor     1940  5  Cary Grant
+  9   1   The Philadelphia Stor  George Cukor     1940  5  Katherine Hepburn
+  9   1   The Maltese Falcon     John Huston      1941 10  Humphrey Bogart
+ 10   0   Casablanca             Michael Curtiz   1942  8  Humphrey Bogart
+ 10   0   Casablanca             Michael Curtiz   1942  8  Ingrid Bergman
+ 10   0   It's a Wonderful Life  Frank Capra      1946 11  Donna Reed
+ 10   0   It's a Wonderful Life  Frank Capra      1946 11  James Steward
+  9   1   A Clockwork Orange     Stanley Kubrick  1971  2  Malcolm McDowell
+  0  10   Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+  9   1   Wall-E                 Andrew Stanton   2008 
+  9   1   Good Morning Vietnam   Barry Levinson   1988 
+  9   1   Unforgiven             Clint Eastwood   1992 
+  9   1   Good Will Hunting      Gus Van Sant     2000 
+  8   2   Dogfight               Nancy Savoca     1991 
+  9   1   King of Hearts         Phillippe De Br  1967 
+  9   1   Schindler's List       Steven Spielber  1993 
+  9   1   Annie Hall             Woody Allen      1977 
+  9   1   Fargo                  Joel Coen        1996 
+  9   1   National Lampoon's An  John Landis      1978 
+ 10   0   Pirates of the Caribb  Gore Verbinski   2003 
+ 10   0   Sleepless in Seattle   Nora Ephron      1993 
+  9   1   The Hangover           Todd Phillips    2009 
+  9   1   When Harry Met Sally   Rob Reiner       1989 
+  9   1   You've Got Mail        Nora Ephron      1998 
+
+  *** Customer ID = 1000  Minnie Mouse
+DVD  Borrow  Good Morning Vietnam   Barry Levinson   1988 
+DVD  Borrow  The Philadelphia Stor  George Cukor     1940  5  Katherine Hepburn
+DVD  Borrow  Good Will Hunting      Gus Van Sant     2000 
+DVD  Borrow  The Philadelphia Stor  George Cukor     1940  5  Cary Grant
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+
+  *** Customer ID = 1111  Mickey Mouse
+DVD  Borrow  A Clockwork Orange     Stanley Kubrick  1971  2  Malcolm McDowell
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Borrow  The Maltese Falcon     John Huston      1941 10  Humphrey Bogart
+DVD  Borrow  Holiday                George Cukor     1938  9  Cary Grant
+
+  *** Customer ID = 5000  Freddie Frog
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Return  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Return  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Return  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+
+  *** Customer ID = 8000  Wally Wacky
+DVD  Borrow  You've Got Mail        Nora Ephron      1998 
+DVD  Return  You've Got Mail        Nora Ephron      1998 
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+DVD  Borrow  National Lampoon's An  John Landis      1978 
+
+  *** Customer ID = 8888  Porky Pig
+DVD  Borrow  Annie Hall             Woody Allen      1977 
+DVD  Borrow  When Harry Met Sally   Rob Reiner       1989 
+DVD  Borrow  Wall-E                 Andrew Stanton   2008 
+DVD  Borrow  Dogfight               Nancy Savoca     1991 
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+
+  *** Customer ID = 8888  Porky Pig
+DVD  Borrow  Annie Hall             Woody Allen      1977 
+DVD  Borrow  When Harry Met Sally   Rob Reiner       1989 
+DVD  Borrow  Wall-E                 Andrew Stanton   2008 
+DVD  Borrow  Dogfight               Nancy Savoca     1991 
+DVD  Borrow  Harold and Maude       Hal Ashby        1971  3  Ruth Gordon
+
+==8671== 
+==8671== HEAP SUMMARY:
+==8671==     in use at exit: 4,638 bytes in 164 blocks
+==8671==   total heap usage: 672 allocs, 508 frees, 58,067 bytes allocated
+==8671== 
+==8671== LEAK SUMMARY:
+==8671==    definitely lost: 2,856 bytes in 80 blocks
+==8671==    indirectly lost: 1,782 bytes in 84 blocks
+==8671==      possibly lost: 0 bytes in 0 blocks
+==8671==    still reachable: 0 bytes in 0 blocks
+==8671==         suppressed: 0 bytes in 0 blocks
+==8671== Rerun with --leak-check=full to see details of leaked memory
+==8671== 
+==8671== For counts of detected and suppressed errors, rerun with: -v
+==8671== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 15 from 8)
+bash-3.2$ exit
+
+Script done on Thu 05 Dec 2013 06:13:32 AM PST
